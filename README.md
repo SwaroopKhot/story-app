@@ -11,6 +11,7 @@ A secure backend application built with FastAPI, implementing user authenticatio
 - Background Task: Periodically or manually trigger batch updates for the country field
 - Database: MongoDB (via Motor) for asynchronous database access
 - Dockerized: Complete setup with Docker Compose for easy deployment
+- Periodic Batch Update: To update the Country field automatically (every 1 minute)
 
 ---
 
@@ -87,7 +88,7 @@ Once the containers are up, you can access the backend at: http://127.0.0.1:8000
 #### 1. Import API Endpoints into Postman:
 
 - Open Postman and click on Import.
-- Select File and import the file from: StoryApp-backend/postman_endpoints
+- Select File and import the file from: <b>StoryApp-backend/postman_endpoints</b>
 - The API collection will be available with valid payloads and authorization headers.
 
 

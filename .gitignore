@@ -7,3 +7,4 @@ StoryApp-backend/.pytest_cache/
 StoryApp-backend/venv
 
 .dockerignore
+/story-frontend

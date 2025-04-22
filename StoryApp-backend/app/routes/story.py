@@ -88,3 +88,21 @@ async def trigger_country_update(
     ):
     background_tasks.add_task(batch_update_countries)
     return {"message": "Background country update started"}
+
+
+# Periodic Scheduler: setting the periodic country field update every minute
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from datetime import datetime
+
+# scheduler = BackgroundScheduler()
+
+async def update_countries_task():
+    print(f"Running batch update for countries at {datetime.now()}")
+    await batch_update_countries()
+
+# Set up scheduler
+scheduler = AsyncIOScheduler()
+scheduler.add_job(update_countries_task, 'interval', seconds=60)
+scheduler.start()
+
