@@ -1,0 +1,7 @@
+# Python
+/StoryApp-backend/__pycache__/
+StoryApp-backend/*.pyc
+StoryApp-backend/.pytest_cache/
+*__pycache__/
+*__pycache__/*
+StoryApp-backend/venv
