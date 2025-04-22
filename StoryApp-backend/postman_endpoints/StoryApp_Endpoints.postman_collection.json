@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "79837898-4cfd-44c2-9ad0-a75106508d6c",
+		"name": "StoryApp_Endpoints",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24980167"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/auth/register",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"swaroop_docker\",\r\n    \"password\" : \"swaroop_docker\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/auth/register"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/auth/login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "swaroop_docker",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "swaroop_docker",
+							"type": "default"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/create",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzd2Fyb29wX2RvY2tlciIsImV4cCI6MTc0NTM0MzgyM30.kDQQrT8llyIWBha2P5lhLh5rUbpwafgui_S7fLGRtV4",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Blog: first Post\",\r\n    \"content\": \"This is my first Blog post ! - docker content test\",\r\n    \"country\" : \"\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/story/create"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/story/"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/6807ae868527e8b182ed05c2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/story/6807ae868527e8b182ed05c2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/id/6807ce5aff77551d41f4ebba",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzd2Fyb29wX2RvY2tlciIsImV4cCI6MTc0NTM0MzgyM30.kDQQrT8llyIWBha2P5lhLh5rUbpwafgui_S7fLGRtV4",
+						"type": "default"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\" : \"Blog: First Blog Docker\",\r\n    \"content\" : \"Welcome to my blog. This is my first blog\"\r\n}"
+				},
+				"url": "http://127.0.0.1:8000/story/id/6807ce5aff77551d41f4ebba"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/id/6807ae868527e8b182ed05c2",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzd2Fyb29wIiwiZXhwIjoxNzQ1MzM1Njc0fQ.ejuzhPRQEE97Tu4W1SmifvwTAACb_TGZ7J2mrTNLlY4",
+						"type": "default"
+					}
+				],
+				"url": "http://127.0.0.1:8000/story/id/6807ae868527e8b182ed05c2"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/story/batch/update-countries",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJzd2Fyb29wIiwiZXhwIjoxNzQ1MzM1Njc0fQ.ejuzhPRQEE97Tu4W1SmifvwTAACb_TGZ7J2mrTNLlY4",
+						"type": "default"
+					}
+				],
+				"url": "http://127.0.0.1:8000/story/batch/update-countries"
+			},
+			"response": []
+		}
+	]
+}
