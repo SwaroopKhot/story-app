@@ -102,7 +102,7 @@ async def update_countries_task():
     await batch_update_countries()
 
 # Set up scheduler
-scheduler = AsyncIOScheduler()
-scheduler.add_job(update_countries_task, 'interval', seconds=60)
-scheduler.start()
+# scheduler = AsyncIOScheduler()
+# scheduler.add_job(update_countries_task, 'interval', seconds=60)
+# scheduler.start()
 

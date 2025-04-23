@@ -5,6 +5,5 @@ StoryApp-backend/.pytest_cache/
 *__pycache__/
 *__pycache__/*
 StoryApp-backend/venv
-
-.dockerignore
 /story-frontend
+.dockerignore
